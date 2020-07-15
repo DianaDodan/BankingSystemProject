@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class LogInService {
     static Scanner scanner = new Scanner(System.in);
 
-    public static void compareUserInputsWithExistingData() {
+    public static String compareUserInputsWithExistingData() {
         System.out.println("Enter your account number: ");
         String inputAccountNumber = scanner.nextLine();
         System.out.println("Enter your password: ");
@@ -25,5 +25,6 @@ public class LogInService {
         } else {
             System.out.println("The account with this number does not match. You can create a new one.");
         }
+        return inputAccountNumber;
     }
 }
