@@ -23,14 +23,19 @@ public class AccountMenu {
         switch (userInput){
             case 1:
                 BalanceService.seeBalance();
+                accessBalanceOrDeleteAccountMenu();
                 break;
             case 2:
                 AccountService.deleteAccount(accountNumber);
+                System.out.println("Thank you for choosing us and hopefully you will come back.");
                 break;
             case 3:
                 MainMenu.displayMainMenu();
                 break;
             case 4:
+                BalanceService.updateExistingBalance();
+                accessBalanceOrDeleteAccountMenu();
+                break;
 
         }
     }
